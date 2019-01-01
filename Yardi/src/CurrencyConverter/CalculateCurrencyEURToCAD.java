@@ -18,12 +18,15 @@ public class CalculateCurrencyEURToCAD implements Currency {
 	}
 
 	@Override
-	public void calculateCurrency() {
+	public boolean calculateCurrency() {
 		if (this.idMenuOption.equals(EURToCADOption)) {
 			System.out.println("You selected EUR to CAD");
 			
 			System.out.println(amount + " EUR is " + this.amount * 1.55 + " CAD");
+		
+			return true;
 		}
+		return false;
 	}
 	
 	public String getIdMenuOption() {

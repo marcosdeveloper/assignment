@@ -18,12 +18,15 @@ public class CalculateCurrencyCADToMXN implements Currency {
 	}
 
 	@Override
-	public void calculateCurrency() {
+	public boolean calculateCurrency() {
 		if (this.idMenuOption.equals(CADToMXNOption)) {
 			System.out.println("You selected CAD to MXN");
 			
 			System.out.println(amount + " CAD is " + this.amount * 14.73 + " MXN");
+		
+			return true;
 		}
+		return false;
 	}
 	
 	public String getIdMenuOption() {

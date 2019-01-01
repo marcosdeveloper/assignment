@@ -18,12 +18,15 @@ public class CalculateCurrencyCADToPHP implements Currency {
 	}
 
 	@Override
-	public void calculateCurrency() {
+	public boolean calculateCurrency() {
 		if (this.idMenuOption.equals(CADToPHPOption)) {
 			System.out.println("You selected CAD to PHP");
 			
 			System.out.println(amount + " CAD is " + this.amount * 39.42 + " PHP");
+		
+			return true;
 		}
+		return false;
 	}
 	
 	public String getIdMenuOption() {

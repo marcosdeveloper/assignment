@@ -18,12 +18,15 @@ public class CalculateCurrencyKRWToCAD implements Currency {
 	}
 
 	@Override
-	public void calculateCurrency() {
+	public boolean calculateCurrency() {
 		if (this.idMenuOption.equals(KRWToCADOption)) {
 			System.out.println("You selected KRW to CAD");
 			
 			System.out.println(amount + " KRW is " + this.amount * 0.0012 + " CAD");
+		
+			return true;
 		}
+		return false;
 	}
 	
 	public String getIdMenuOption() {

@@ -18,12 +18,15 @@ public class CalculateCurrencyCADToGBP implements Currency {
 	}
 
 	@Override
-	public void calculateCurrency() {
+	public boolean calculateCurrency() {
 		if (this.idMenuOption.equals(CADToGBPOption)) {
 			System.out.println("You selected CAD to GBP");
 			
 			System.out.println(amount + " CAD is " + this.amount * 0.58 + " GBP");
+		
+			return true;
 		}
+		return false;
 	}
 	
 	public String getIdMenuOption() {

@@ -10,5 +10,5 @@ public interface Currency {
 	/**
 	 * Method responsible for each currency makes their calculus. Each class has its proper way to calculate.
 	 */
-	void calculateCurrency();
+	boolean calculateCurrency();
 }

@@ -18,12 +18,15 @@ public class CalculateCurrencyPHPToCAD implements Currency {
 	}
 
 	@Override
-	public void calculateCurrency() {
+	public boolean calculateCurrency() {
 		if (this.idMenuOption.equals(PHPToCADOption)) {
 			System.out.println("You selected PHP to CAD");
 			
 			System.out.println(amount + " PHP is " + this.amount * 0.025 + " CAD");
+		
+			return true;
 		}
+		return false;
 	}
 	
 	public String getIdMenuOption() {

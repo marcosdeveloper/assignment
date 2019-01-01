@@ -18,12 +18,15 @@ public class CalculateCurrencyCADToNZD implements Currency {
 	}
 
 	@Override
-	public void calculateCurrency() {
+	public boolean calculateCurrency() {
 		if (this.idMenuOption.equals(CADToNZDOption)) {
 			System.out.println("You selected CAD to NZD");
 			
 			System.out.println(amount + " CAD is " + this.amount * 1.09 + " NZD");
+		
+			return true;
 		}
+		return false;
 	}
 	
 	public String getIdMenuOption() {

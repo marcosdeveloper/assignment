@@ -18,12 +18,15 @@ public class CalculateCurrencyUSDToCAD implements Currency {
 	}
 
 	@Override
-	public void calculateCurrency() {
+	public boolean calculateCurrency() {
 		if (this.idMenuOption.equals(USDToCADOption)) {
 			System.out.println("You selected USD to CAD");
 			
 			System.out.println(amount + " USD is " + this.amount * 1.31 + " CAD");
+		
+			return true;
 		}
+		return false;
 	}
 	
 	public String getIdMenuOption() {

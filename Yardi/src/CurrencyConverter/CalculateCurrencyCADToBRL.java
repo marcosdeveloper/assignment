@@ -18,12 +18,15 @@ public class CalculateCurrencyCADToBRL implements Currency {
 	}
 
 	@Override
-	public void calculateCurrency() {
+	public boolean calculateCurrency() {
 		if (this.idMenuOption.equals(CADToBRLOption)) {
 			System.out.println("You selected CAD to BRL");
 			
 			System.out.println(amount + " CAD is " + this.amount * 2.85 + " BRL");
+			
+			return true;
 		}
+		return false;
 	}
 	
 	public String getIdMenuOption() {

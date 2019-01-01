@@ -18,12 +18,15 @@ public class CalculateCurrencyCADToCNY implements Currency {
 	}
 
 	@Override
-	public void calculateCurrency() {
+	public boolean calculateCurrency() {
 		if (this.idMenuOption.equals(CADToCNYOption)) {
 			System.out.println("You selected CAD to CNY");
 			
 			System.out.println(amount + " CAD is " + this.amount * 5.10 + " CNY");
+		
+			return true;
 		}
+		return false;
 	}
 	
 	public String getIdMenuOption() {

@@ -18,12 +18,15 @@ public class CalculateCurrencyAUDToCAD implements Currency {
 	}
 
 	@Override
-	public void calculateCurrency() {
+	public boolean calculateCurrency() {
 		if (this.idMenuOption.equals(AUDToCADOption)) {
 			System.out.println("You selected AUD to CAD");
 			
 			System.out.println(amount + " AUD is " + this.amount * 0.96 + " CAD");
+			
+			return true;
 		}
+		return false;
 	}
 	
 	public String getIdMenuOption() {
